@@ -1,9 +1,5 @@
 <x-app-layout>    
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <h1>hOLA</h1>
-            </div>
-        </div>
+    <div class="flex justify-center items-center min-h-3/4">
+        <x-authentication-card-logo class="h-56 w-56 text-6xl" />
     </div>
 </x-app-layout>

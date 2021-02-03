@@ -21,12 +21,25 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
+        <div class="min-h-screen bg-gray-900 flex justify-center items-center">
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="min-w-full">
+                <div class="md:w-full lg:w-9/12 mx-auto my-auto">
+                    <div class="overflow-hidden shadow-xl">
+                        <div class="grid grid-cols-3 min-w-full min-h-8/9">
+                            <div class="col-span-1 bg-gray-800">
+                                @livewire('navigation-menu')
+                                @livewire('search-input')
+
+                                <h2 class="text-base text-white foont-bold ml-3 mt-2">Chats</h2>
+                                @livewire('chat.user-chat')
+                            </div>
+                            <div class="col-span-2  bg-gray-700">
+                                {{ $slot }}  
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
 
