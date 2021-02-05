@@ -18,7 +18,7 @@ class CreateMessagesTable extends Migration
             $table->unsignedBigInteger('chat_id');
             $table->unsignedBigInteger('user_id');
             $table->string('message');
-            $table->date('send_date');
+            $table->dateTime('send_date');
             $table->timestamps();
 
             $table->foreign('chat_id')->references('id')->on('chats');
